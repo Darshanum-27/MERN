@@ -1,12 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import ListCard from './Components/ListCard';
+const time= ["12:30","1:30"];
+
+const click=(e)=>{
+  return(
+    
+  )
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
+      <button onClick={(e)=>click(e)}>Click Me TO add</button>
+      {time.map((t) =>{
+        return(
+        <ListCard time={t} task="Message"/>
+        )
+      })}
     </div>
   );
 }
